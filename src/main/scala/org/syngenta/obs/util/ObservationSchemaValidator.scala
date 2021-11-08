@@ -37,7 +37,6 @@ class ObservationSchemaValidator(config: ObservationSchemaConfig) extends Serial
   }
 
   def getInvalidFieldName(errorInfo: String): String = {
-    println(errorInfo)
     val message = errorInfo.split("schema:")
     val defaultValidationErrMsg = "Unable to obtain field name for failed validation"
     if (message.length > 1) {
